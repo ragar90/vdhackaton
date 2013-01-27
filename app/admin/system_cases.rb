@@ -32,9 +32,11 @@ ActiveAdmin.register SystemCase do
 	    f.inputs "Conversacion Activa" do  
 	    	f.inputs "People" do
 	    		f.has_many :people do |j|
+	    			j.input :name, :label => "Nombre"
 	    			j.input :address, :label => "Direccion"
 	    		end
 	    	end
+
 	    	f.inputs "Assaults" do
 				f.has_many :system_case_assaults do |j|
 					j.input :assault, :label => "Agresion"
@@ -52,8 +54,8 @@ ActiveAdmin.register SystemCase do
 	    	#end
 
 	    	f.inputs "Diagnostico" do
-	    		#f.has_many :violence_rols do |v|
-	    		#	v.input :id, :as => :hidden
+	    		if.has_many :violence_rols do |v|
+	    			v.input :id, :as => :hidden
 
 		    		v.has_many :person do |i|
 		    			i.input :name, :label => "Nombre"
@@ -74,7 +76,7 @@ ActiveAdmin.register SystemCase do
 	    					e.input :psychophysiological_alteration, :label => "Alteracion psicofisiologica"
 	    				end
 	    			end	    			
-	    		#end
+	    		end
 	    	end
 	    end
 	end
