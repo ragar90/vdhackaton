@@ -6,5 +6,6 @@ ActiveAdmin.register AssaultKind do
   	end   
 
 	menu :parent => "Configuraciones"
-  
+ 	
+ 	
 end

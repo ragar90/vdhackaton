@@ -37,6 +37,11 @@ ActiveAdmin.register SystemCase do
 	    			j.input :address, :label => "Direccion"
 	    		end
 	    	end
+	    	f.inputs "Assaults" do
+				f.has_many :system_case_assaults do |j|
+					j.input :assault, :label => "Agresion"
+				end
+			end	
 	    end
 	end
 
