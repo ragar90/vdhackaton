@@ -1,7 +1,7 @@
 //= require active_admin/base
 
 $(function(){
-	$(".person_age").bind("change", function(e){
+	$(".person_age").on("change", function(e){
 		console.log("HI")
 		/*var age = parseInt($(this).attr("value"));
 
@@ -12,7 +12,7 @@ $(function(){
 		else{
 			$(this).next().css('display', 'block');
 			$(this).next().next().css('display', 'block');
-		}
+		}*/
 	});
 
 	console.log("Hello hello")

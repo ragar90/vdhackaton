@@ -11,6 +11,7 @@ end
 unless DocumentType.all.length > 0
 	DocumentType.create!(:name => "DUI")
 	DocumentType.create!(:name => "NIT")
+	DocumentType.create!(:name => "Partida de nacimiento")
 end
 
 unless State.all.length>0
