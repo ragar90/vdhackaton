@@ -10,7 +10,7 @@ class CreateViolenceRols < ActiveRecord::Migration
       t.timestamps
     end
     add_index :violence_rols, :person_id
-    add_index :violence_rols, :case_id
+    add_index :violence_rols, :system_case_id
     add_index :violence_rols, :profile_aggressor_id
     add_index :violence_rols, :victim_diagnosis_id
   end
