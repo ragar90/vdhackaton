@@ -47,39 +47,27 @@ ActiveAdmin.register SystemCase do
 	    	end
 
 	    	f.inputs "Diagnostico" do
-	    		f.has_many :violence_rols do |v|
-	    			v.input :id, :as => :hidden
+	    		#f.has_many :violence_rols do |v|
+	    		#	v.input :id, :as => :hidden
 
-	    			v.has_many :victim_diagnoses do |d|
+	    			f.has_many :victim_diagnoses do |d|
 	    				d.input :physical_disability, :label => "Discapacidad fisica", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :mental_disability, :label => "Discapacidad mental", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :violence_witness, :label => "Testigo de violencia", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :sexual_assault_antecedent, :label => "Antecedente de agresion sexual", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :diagnosis_description, :label => "Diagnostico"
 	    			end	    			
-	    		end
+	    		#end
 	    	end
 	    end
 	end
 
 	if can?(:legal_management, SystemCase)        
-	    f.inputs "Trabajo Social" do  
-	    	f.inputs "Datos del agresor" do
-	    		f.has_many :violence_rols do |v|
-	    			v.input :id, :as => :hidden
+	    f.inputs "Datos del agresor" do
+	    #	f.has_many :profile_aggressors do |d|
 
-		    		v.has_many :profile_aggressor do |d|
-		    			#d.input	:parentage, :label =>"Parentesco"
-						d.input	:physical_condition, :label =>"Condicion fisica"
-						d.input	:weapon_kind, :label =>"Tipo de arma"
-		    			d.input	:aftermath_war, :label =>"Tipo de arma"
-		    			d.input	:prior_criminal, :label =>"Antecendente criminal"
-		    			d.input	:sexual_assault_antecedent, :label =>"Antecedente de agresion sexual"
-		    			d.input	:violence_witness, :label =>"Tiestigo de violencia"
-		    		end	
-		    	end
-	    	end
-	    end
+	    #·	end
+    	end
 	end
 
     f.buttons                         

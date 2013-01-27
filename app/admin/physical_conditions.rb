@@ -5,6 +5,6 @@ ActiveAdmin.register PhysicalCondition do
     	controller.authorize_resource 
   	end 
 
-	menu :parent => "Configuraciones" 
+	menu :parent => "Configuraciones", :label => "Condiciones fisicas" 
   
 end

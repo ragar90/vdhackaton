@@ -5,6 +5,6 @@ ActiveAdmin.register FamilyMaintenance do
     	controller.authorize_resource 
   	end  
 
-	menu :parent => "Configuraciones"
+	menu :parent => "Configuraciones", :label => "Tipos de sostenimiento familiar"
   
 end

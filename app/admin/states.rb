@@ -5,6 +5,6 @@ ActiveAdmin.register State do
     	controller.authorize_resource 
   	end  
 
-	menu :parent => "Configuraciones"
+	menu :parent => "Configuraciones", :label => "Departamentos"
   
 end
