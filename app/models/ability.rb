@@ -14,11 +14,14 @@ class Ability
         #can :manage, SystemCase  
         #cannot [:destroy,:edit], SystemCase   
       when "Psicologo"
-        can [:follow_case, :edit, :update], SystemCase 
+        can [:follow_case, :edit, :update, :read], SystemCase 
       when "Medico"
-        can [:give_assistance, :edit, :update], SystemCase 
+        can :manage, ViolenceRol
+        can :manage, VictimDiagnosis 
+        can :manage, Person 
+        can [:give_assistance, :read, :edit, :update], SystemCase 
       when "Trabajador Social"
-        can [:legal_management, :edit, :update], SystemCase 
+        can [:legal_management, :edit, :update, :read], SystemCase 
     end
   end
 

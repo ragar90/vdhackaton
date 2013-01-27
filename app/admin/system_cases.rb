@@ -9,8 +9,6 @@ ActiveAdmin.register SystemCase do
     include ActiveAdminCanCan
   end
 
-  #actions get_actions    
-
   active_admin_allowed_action_items         
 
   form do |f|       
@@ -47,23 +45,35 @@ ActiveAdmin.register SystemCase do
 
 	if can?(:give_assistance, SystemCase)        
 	    f.inputs "Asistencia Medica" do  
-	    	f.inputs "Victimas" do
-	    		f.has_many :violence_rols do |j|
-	    			j.belongs_to :people do |i|
-	    				i.input :name, :label => "Nombre"
-	    			end
+	    	#f.inputs "Victimas" do
+	    	#	f.has_many :people do |i|
+	    	#		i.input :name, :label => "Nombre"
+	    	#	end
+	    	#end
 
-	    			j.has_one :victim_diagnoses do |d|
+	    	f.inputs "Diagnostico" do
+	    		f.has_many :violence_rols do |v|
+	    			v.input :id, :as => :hidden
+
+		    		v.has_many :person do |i|
+		    			i.input :name, :label => "Nombre"
+		    		end
+
+	    			v.has_many :victim_diagnoses do |d|
 	    				d.input :physical_disability, :label => "Discapacidad fisica", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :mental_disability, :label => "Discapacidad mental", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :violence_witness, :label => "Testigo de violencia", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :sexual_assault_antecedent, :label => "Antecedente de agresion sexual", :as => :radio, :collection => [["No", 0], ["Si", 1]]
 	    				d.input :diagnosis_description, :label => "Diagnostico"
-	    			end
-	    		end
+	    			
+	    				d.has_many :victim_diagnosis_emotional_conditions do |e| 
+	    					e.input :emotional_condition, :label => "Condicion emocional"
+	    				end
 
-	    		f.has_many :people do |j|
-	    			#Add nested model for injuries
+	    				d.has_many :victim_diagnosis_psychophysiological_alterations do |e|
+	    					e.input :psychophysiological_alteration, :label => "Alteracion psicofisiologica"
+	    				end
+	    			end	    			
 	    		end
 	    	end
 	    end
@@ -81,13 +91,5 @@ ActiveAdmin.register SystemCase do
 
     f.buttons                         
   end  
-
-  #def get_actions
-  #	if can?(:start_case, SystemCase)  
-  #		return :index, :new, :create, :show  
-  #	elsif can?(:follow_case, SystemCase)  
-  #		return :index, :edit, :update, :show
-  #	end  		
-  #end
 
 end
