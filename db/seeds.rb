@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Level.create!(:name => "Administrador")
+Level.create!(:name => "Recepcionista")
+Level.create!(:name => "Psicologo")
+Level.create!(:name => "Medico")
+Level.create!(:name => "Trabajador Social")
