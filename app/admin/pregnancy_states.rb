@@ -5,6 +5,6 @@ ActiveAdmin.register PregnancyState do
     	controller.authorize_resource 
   	end  
 
-	menu :parent => "Configuraciones"
+	menu :parent => "Configuraciones", :label => "Estados de embarazo"
   
 end

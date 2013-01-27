@@ -5,6 +5,6 @@ ActiveAdmin.register EducationalLevel do
     	controller.authorize_resource 
   	end   
 
-	menu :parent => "Configuraciones"
+	menu :parent => "Configuraciones", :label => "Tipos de niveles educativos"
   
 end

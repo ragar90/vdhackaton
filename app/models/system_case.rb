@@ -11,6 +11,9 @@ class SystemCase < ActiveRecord::Base
   attr_accessible :assault_date, :complaint, :recidivism, :people_attributes, :violence_rols_attributes, :victim_diagnoses_attributes
 
   accepts_nested_attributes_for :people, allow_destroy: true
+  attr_accessible :system_case_assaults_attributes
+  accepts_nested_attributes_for :system_case_assaults, allow_destroy: true
+  
   accepts_nested_attributes_for :violence_rols, allow_destroy: true
   accepts_nested_attributes_for :victim_diagnoses, allow_destroy: true
 

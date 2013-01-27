@@ -5,6 +5,6 @@ ActiveAdmin.register PsychophysiologicalAlteration do
     	controller.authorize_resource 
   	end  
 
-	menu :parent => "Configuraciones"
+	menu :parent => "Configuraciones", :label => "Alteraciones psicofisiologicas"
   
 end
