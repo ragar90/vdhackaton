@@ -7,8 +7,12 @@ class Ability
       when "Administrador"
         can :manage, :all
       when "Recepcionista"
-        can :manage, SystemCase   
-        #cannot [:destroy,:edit], Post   
-      end
-  end 
+        can :create, SystemCase 
+        #can :manage, SystemCase  
+        #cannot [:destroy,:edit], SystemCase   
+      when "Psicologo"
+        can [:follow_case, :edit, :update], SystemCase 
+    end
+  end
+
 end  
