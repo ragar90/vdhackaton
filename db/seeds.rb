@@ -71,4 +71,47 @@ unless FamilyMaintenance.all.length > 0
 	FamilyMaintenance.create!(:name => "Proveedor(a) desde el extranjero")
 	FamilyMaintenance.create!(:name => "Otro miembro de la familia")
 end
->>>>>>> administrative_tables
+unless ParentageType.all.length > 0
+	ParentageType.create!(:name => "Abuelo")
+	ParentageType.create!(:name => "Abuela")
+	ParentageType.create!(:name => "Madre")
+	ParentageType.create!(:name => "Padre")
+	ParentageType.create!(:name => "Hermano")
+	ParentageType.create!(:name => "Hermana")
+	ParentageType.create!(:name => "Padrastro")
+	ParentageType.create!(:name => "Madrastroa")
+end
+unless EmotionalCondition.all.length > 0
+	EmotionalCondition.create!(:name => "Agresividad")
+	EmotionalCondition.create!(:name => "Angustia")
+	EmotionalCondition.create!(:name => "Tristeza")
+	EmotionalCondition.create!(:name => "Impotencia")
+	EmotionalCondition.create!(:name => "Culpa")
+	EmotionalCondition.create!(:name => "Indiferencia")
+	EmotionalCondition.create!(:name => "Miedo")
+	EmotionalCondition.create!(:name => "Enojo")
+	EmotionalCondition.create!(:name => "Confusión")
+	EmotionalCondition.create!(:name => "Inseguridad")
+	EmotionalCondition.create!(:name => "Intencion Suicida")
+	EmotionalCondition.create!(:name => "Ideación Suicida")
+	EmotionalCondition.create!(:name => "Intento Homicida")
+	EmotionalCondition.create!(:name => "Ideación Homicida")
+end
+unless PhysicalCondition.all.length > 0
+	PhysicalCondition.create!(:name => "Alcoholizado/a")
+	PhysicalCondition.create!(:name => "Drogado/a")
+	PhysicalCondition.create!(:name => "Transtorno psiquiatrico")
+	PhysicalCondition.create!(:name => "Estable/Sobrio")
+end
+unless PsychophysiologicalAlteration.all.length > 0
+	PsychophysiologicalAlteration.create!(:name => "Alteracion del sueño")
+	PsychophysiologicalAlteration.create!(:name => "Alteracion del apetito")
+	PsychophysiologicalAlteration.create!(:name => "Alteracion del gastrointestinal")
+	PsychophysiologicalAlteration.create!(:name => "Dolor de cabeza")
+	PsychophysiologicalAlteration.create!(:name => "Palpitacion")
+	PsychophysiologicalAlteration.create!(:name => "Suduracion excesiva")
+	PsychophysiologicalAlteration.create!(:name => "Temblor del cuerpo")
+	PsychophysiologicalAlteration.create!(:name => "Tic nervioso")
+	PsychophysiologicalAlteration.create!(:name => "Alteracion de la piel")
+	PsychophysiologicalAlteration.create!(:name => "Mareos")
+end
