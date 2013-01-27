@@ -1,6 +1,6 @@
 class ProfileAggressor < ActiveRecord::Base
   
-  belongs_to :parentage_id
+  belongs_to :parentage
   belongs_to :physical_condition
   belongs_to :weapon_kind
   has_many :violence_roles
