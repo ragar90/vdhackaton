@@ -12,6 +12,10 @@ class Ability
         #cannot [:destroy,:edit], SystemCase   
       when "Psicologo"
         can [:follow_case, :edit, :update], SystemCase 
+      when "Medico"
+        can [:give_assistance, :edit, :update], SystemCase 
+      when "Trabajador Social"
+        can [:legal_management, :edit, :update], SystemCase 
     end
   end
 

@@ -40,6 +40,26 @@ ActiveAdmin.register SystemCase do
 	    end
 	end
 
+	if can?(:give_assistance, SystemCase)        
+	    f.inputs "Asistencia Medica" do  
+	    	f.inputs "People" do
+	    		f.has_many :people do |j|
+	    			#Add nested model for injuries
+	    		end
+	    	end
+	    end
+	end
+
+	if can?(:legal_management, SystemCase)        
+	    f.inputs "Trabajo Social" do  
+	    	f.inputs "People" do
+	    		f.has_many :people do |j|
+	    			#Add nested model for aggressors
+	    		end
+	    	end
+	    end
+	end
+
     f.buttons                         
   end  
 
