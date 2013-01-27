@@ -1,9 +1,8 @@
 //= require active_admin/base
 
-$(function(){
-	$(".person_age").on("change", function(e){
-		console.log("HI")
-		/*var age = parseInt($(this).attr("value"));
+/*$(function(){
+    $(".person_age").on("click", function(){
+		var age = parseInt($(this).attr("value"));
 
 		if(age >= 18){
 			$(this).next().addClass('display', 'none');
@@ -14,6 +13,4 @@ $(function(){
 			$(this).next().next().css('display', 'block');
 		}*/
 	});
-
-	console.log("Hello hello")
-});
+});*/
