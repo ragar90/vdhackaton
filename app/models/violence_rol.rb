@@ -8,7 +8,9 @@ class ViolenceRol < ActiveRecord::Base
   has_many :rol_states, :through => :violence_rol_states
   
   attr_accessible :rol_kind, :victim_diagnoses_attributes
+  attr_accessible :person_attributes
 
   accepts_nested_attributes_for :victim_diagnoses, allow_destroy: true
+  accepts_nested_attributes_for :person, allow_destroy: true
 
 end
