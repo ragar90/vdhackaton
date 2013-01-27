@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  person_id: 1
+  zone_kind_id: 1
+  created_on: 2013-01-26 21:53:10
+  updated_on: 2013-01-26 21:53:10
+
+two:
+  person_id: 1
+  zone_kind_id: 1
+  created_on: 2013-01-26 21:53:10
+  updated_on: 2013-01-26 21:53:10

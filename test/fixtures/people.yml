@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  age: 1
+  sex: false
+  total_of_sons: 1
+  total_of_daughters: 1
+  document_number: MyString
+  address: MyString
+  phone_number: MyString
+  school_name: MyString
+  school_grade: MyString
+  city_id: 1
+  zone_kind_id: 1
+  educational_level_id: 1
+  civil_state_id: 1
+  family_maintenance_id: 1
+  pregnancy_type_id: 1
+  document_type_id: 1
+
+two:
+  name: MyString
+  age: 1
+  sex: false
+  total_of_sons: 1
+  total_of_daughters: 1
+  document_number: MyString
+  address: MyString
+  phone_number: MyString
+  school_name: MyString
+  school_grade: MyString
+  city_id: 1
+  zone_kind_id: 1
+  educational_level_id: 1
+  civil_state_id: 1
+  family_maintenance_id: 1
+  pregnancy_type_id: 1
+  document_type_id: 1
