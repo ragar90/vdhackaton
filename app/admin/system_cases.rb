@@ -64,10 +64,20 @@ ActiveAdmin.register SystemCase do
 
 	if can?(:legal_management, SystemCase)        
 	    f.inputs "Trabajo Social" do  
-	    	f.inputs "People" do
-	    		f.has_many :people do |j|
-	    			#Add nested model for aggressors
-	    		end
+	    	f.inputs "Datos del agresor" do
+	    		f.has_many :violence_rols do |v|
+	    			v.input :id, :as => :hidden
+
+		    		v.has_many :profile_aggressor do |d|
+		    			#d.input	:parentage, :label =>"Parentesco"
+						d.input	:physical_condition, :label =>"Condicion fisica"
+						d.input	:weapon_kind, :label =>"Tipo de arma"
+		    			d.input	:aftermath_war, :label =>"Tipo de arma"
+		    			d.input	:prior_criminal, :label =>"Antecendente criminal"
+		    			d.input	:sexual_assault_antecedent, :label =>"Antecedente de agresion sexual"
+		    			d.input	:violence_witness, :label =>"Tiestigo de violencia"
+		    		end	
+		    	end
 	    	end
 	    end
 	end
