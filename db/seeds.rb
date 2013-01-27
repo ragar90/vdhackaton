@@ -1,6 +1,7 @@
 #!/bin/env ruby
 # encoding: utf-8
 unless Level.all.length > 0
+	print "Creating levels\n"
 	Level.create!(:name => "Administrador")
 	Level.create!(:name => "Recepcionista")
 	Level.create!(:name => "Psicologo")
@@ -9,12 +10,14 @@ unless Level.all.length > 0
 end
 
 unless DocumentType.all.length > 0
+	print "Creating documents type\n"
 	DocumentType.create!(:name => "DUI")
 	DocumentType.create!(:name => "NIT")
 	DocumentType.create!(:name => "Partida de nacimiento")
 end
 
 unless State.all.length>0
+	print "Creating states\n"
 	State.create!(:name=>"Ahuachapan")	
 	State.create!(:name=>"Cabañas")
 	State.create!(:name=>"Chalatenango")
@@ -30,7 +33,8 @@ unless State.all.length>0
 	State.create!(:name=>"Sonsonate")
 	State.create!(:name=>"Usulután")
 end
-unless CivilState.all.length > 0 
+unless CivilState.all.length > 0
+	print "Creating civil states\n" 
 	CivilState.create!(:name=>"Soltero/a")
 	CivilState.create!(:name=>"Separado/a")
 	CivilState.create!(:name=>"Casado/a")
@@ -39,11 +43,13 @@ unless CivilState.all.length > 0
 	CivilState.create!(:name=>"Unión NM")
 end
 unless AssaultKind.all.length > 0
+	print "Creating Assults kind\n"
 	AssaultKind.create!(:name => "Violencia Intrafamiliar")
 	AssaultKind.create!(:name => "Maltrato a la niñez")
 	AssaultKind.create!(:name => "Agresión sexual")
 end
 unless EducationalLevel.all.length > 0
+	print "Educational levels\n"
 	EducationalLevel.create!(:name => "Primaria")
 	EducationalLevel.create!(:name => "Secundaria")
 	EducationalLevel.create!(:name => "Bachillerato")
@@ -52,6 +58,7 @@ unless EducationalLevel.all.length > 0
 	EducationalLevel.create!(:name => "Ninguno")
 end
 unless PregnancyState.all.length > 0
+	print "Creating pregnacy states\n"
 	PregnancyState.create!(:description => "Si")
 	PregnancyState.create!(:description => "No")
 	PregnancyState.create!(:description => "N/A")
@@ -60,11 +67,13 @@ unless PregnancyState.all.length > 0
 	PregnancyState.create!(:description => "No deseado")
 end
 unless ZoneKind.all.length > 0
+	print "Creating zone kinds\n"
 	ZoneKind.create!(:name => "Urbana")
 	ZoneKind.create!(:name => "Rural")
 	ZoneKind.create!(:name => "Marginal")
 end
 unless FamilyMaintenance.all.length > 0
+	print "Creating Family Maintenance\n"
 	FamilyMaintenance.create!(:name => "Mujer jefa de hogar")
 	FamilyMaintenance.create!(:name => "Hombre jefe de hogar")
 	FamilyMaintenance.create!(:name => "Jefatura compartida")
@@ -72,6 +81,7 @@ unless FamilyMaintenance.all.length > 0
 	FamilyMaintenance.create!(:name => "Otro miembro de la familia")
 end
 unless ParentageType.all.length > 0
+	print "Creating Parentage type\n"
 	ParentageType.create!(:name => "Abuelo")
 	ParentageType.create!(:name => "Abuela")
 	ParentageType.create!(:name => "Madre")
@@ -82,6 +92,7 @@ unless ParentageType.all.length > 0
 	ParentageType.create!(:name => "Madrastroa")
 end
 unless EmotionalCondition.all.length > 0
+	print "Creating emotional  condition\n"
 	EmotionalCondition.create!(:name => "Agresividad")
 	EmotionalCondition.create!(:name => "Angustia")
 	EmotionalCondition.create!(:name => "Tristeza")
@@ -98,12 +109,14 @@ unless EmotionalCondition.all.length > 0
 	EmotionalCondition.create!(:name => "Ideación Homicida")
 end
 unless PhysicalCondition.all.length > 0
+	print "Creating phisical condition\n"
 	PhysicalCondition.create!(:name => "Alcoholizado/a")
 	PhysicalCondition.create!(:name => "Drogado/a")
 	PhysicalCondition.create!(:name => "Transtorno psiquiatrico")
 	PhysicalCondition.create!(:name => "Estable/Sobrio")
 end
 unless PsychophysiologicalAlteration.all.length > 0
+	print "Creating psycophisiological condition\n"
 	PsychophysiologicalAlteration.create!(:name => "Alteracion del sueño")
 	PsychophysiologicalAlteration.create!(:name => "Alteracion del apetito")
 	PsychophysiologicalAlteration.create!(:name => "Alteracion del gastrointestinal")
