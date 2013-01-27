@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  physical_disability: false
+  mental_disability: false
+  diagnosis_description: MyText
+  violence_witness: false
+  sexual_assault_antecedent: false
+
+two:
+  physical_disability: false
+  mental_disability: false
+  diagnosis_description: MyText
+  violence_witness: false
+  sexual_assault_antecedent: false

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  system_case: 
+  assault: 
+
+two:
+  system_case: 
+  assault: 

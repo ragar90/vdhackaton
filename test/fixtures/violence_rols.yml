@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  person: 
+  case: 
+  rol_kind: false
+  profile_aggressor: 
+  victim_diagnosis: 
+
+two:
+  person: 
+  case: 
+  rol_kind: false
+  profile_aggressor: 
+  victim_diagnosis: 
