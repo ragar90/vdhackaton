@@ -14,14 +14,14 @@ module ActiveAdminCanCan
  
   def permission
     case action_name
-    when "show"
-      :read
-    when "new", "create"
-      :create
-    when "edit"
-      :update
-    else
-      action_name.to_sym
+      when "show"
+        :read
+      when "new", "create"
+        :create
+      when "edit"
+        :update
+      else
+        action_name.to_sym
     end
   end
 end

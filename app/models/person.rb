@@ -10,6 +10,7 @@ class Person < ActiveRecord::Base
   has_many :zone_kinds, :through => :zone_kind_histories
   has_one :guardian
   has_one :occupation
+  has_many :violence_rols
 
   attr_accessible :address, :age, :city_id, :civil_state_id, :document_number, :document_type_id, :educational_level_id, :family_maintenance_id, :name, :phone_number, :pregnancy_state_id, :school_grade, :school_name, :sex, :total_of_daughters, :total_of_sons, :zone_kind_id
 
