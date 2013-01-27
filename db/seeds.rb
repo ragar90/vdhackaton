@@ -11,3 +11,6 @@ Level.create!(:name => "Recepcionista")
 Level.create!(:name => "Psicologo")
 Level.create!(:name => "Medico")
 Level.create!(:name => "Trabajador Social")
+
+DocumentType.create!(:name => "DUI")
+DocumentType.create!(:name => "NIT")

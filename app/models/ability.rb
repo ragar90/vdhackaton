@@ -7,7 +7,7 @@ class Ability
       when "Administrador"
         can :manage, :all
       when "Recepcionista"
-        can :manage, Level   
+        can :manage, SystemCase   
         #cannot [:destroy,:edit], Post   
       end
   end 
