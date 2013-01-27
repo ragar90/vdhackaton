@@ -8,7 +8,9 @@ class Ability
       when "Administrador"
         can :manage, :all
       when "Recepcionista"
-        can :create, SystemCase 
+        can [:create, :read], SystemCase 
+        can :create, ViolenceRol 
+        can :create, Person 
         #can :manage, SystemCase  
         #cannot [:destroy,:edit], SystemCase   
       when "Psicologo"
