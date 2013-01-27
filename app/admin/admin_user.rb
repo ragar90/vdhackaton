@@ -10,11 +10,18 @@ ActiveAdmin.register AdminUser do
   filter :email                       
 
   form do |f|                         
-    f.inputs "Admin Details" do       
+    f.inputs "Admin Details" do   
+      f.input :level    
       f.input :email                  
       f.input :password               
       f.input :password_confirmation  
     end                               
     f.actions                         
-  end                                 
+  end  
+  
+  ActiveAdmin.register AdminUser do    
+    menu :if => proc{ can?(:manage, AdminUser) }     
+    controller.authorize_resource 
+  end                               
+   
 end                                   
