@@ -1,4 +1,4 @@
-class EmotionalConditions < ActiveRecord::Base
+class EmotionalCondition < ActiveRecord::Base
 
   has_many :victim_diagnosis_emotional_conditions
 
