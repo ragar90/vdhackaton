@@ -4,10 +4,10 @@ ActiveAdmin.register SystemCase do
 
   menu :label => "Casos"      
   
-  #controller do
-  #  authorize_resource
-  #  include ActiveAdminCanCan
-  #end
+  controller do
+    #authorize_resource
+    include ActiveAdminCanCan
+  end
 
   #actions get_actions    
 
