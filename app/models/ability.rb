@@ -2,7 +2,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= AdminUser.new       
+    user ||= AdminUser.new
+    user.level ||=Level.first      
     case user.level.name      
       when "Administrador"
         can :manage, :all
