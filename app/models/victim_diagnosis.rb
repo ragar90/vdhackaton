@@ -1,6 +1,6 @@
 class VictimDiagnosis < ActiveRecord::Base
   
-  belongs_to :violence_rols
+  belongs_to :violence_rol
   has_many :victim_diagnosis_emotional_conditions
   has_many :victim_diagnosis_psychophysiological_alterations
   

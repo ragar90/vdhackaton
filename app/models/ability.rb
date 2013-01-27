@@ -16,7 +16,10 @@ class Ability
       when "Psicologo"
         can [:follow_case, :edit, :update], SystemCase 
       when "Medico"
-        can [:give_assistance, :edit, :update], SystemCase 
+        can :manage, ViolenceRol
+        can :manage, VictimDiagnosis 
+        can :manage, Person 
+        can [:give_assistance, :read, :edit, :update], SystemCase 
       when "Trabajador Social"
         can [:legal_management, :edit, :update], SystemCase 
     end
