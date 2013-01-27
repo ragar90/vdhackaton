@@ -1,5 +1,9 @@
 class City < ActiveRecord::Base
-  attr_accessible :name, :state_id
-  has_many :people
+  
   belongs_to :state
+  has_many :people
+  has_many :system_cases
+
+  attr_accessible :name, :state_id
+
 end
